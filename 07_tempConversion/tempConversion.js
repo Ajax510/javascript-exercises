@@ -1,21 +1,19 @@
-const ftoc = function (temp) {
-  // formula to turn temps into fahrenheit
-  const fahrenheit = (temp - 32) * 0.5556;
-  // Rounded the fahrenheit and assigned to new const
-  const fahrenheitRounded = Math.round(fahrenheit * 10) / 10;
-  // The .toFixed(1) will show a number of digits after the decimal
-  // To fixed will return a string
-  // The function pasrseFloat() will return a decimal number
-  return parseFloat(fahrenheitRounded.toFixed(1));
+const ftoc = function (f) {
+  // insert the formula to turn temp into F
+  // formula: (temp - 32) * (5/9) = F
+  // the * 10 after will give you a number that will be easier to round
+  // the last / 10 will give you a point behind the decimal
+  // finally, well return the rounded temp in F
+  return Math.round((f - 32) * (5 / 9) * 10) / 10;
 };
 
-const ctof = function (temp) {
-  // equation to turn temperatures to celsius
-  const celsius = temp * 1.8 + 32;
-  // Rounded the celsius and assigned to new const
-  const celsiusRounded = Math.round(celsius * 10) / 10;
-  // returnred the new const after rounding it and converting into a decimal
-  return parseFloat(celsiusRounded.toFixed(2));
+const ctof = function (c) {
+  // insert the formula to turn temp into C
+  // formula: ((temp * 9) / 5) + 32 = C
+  // the * 10 after will give you a number that will be easier to round
+  // the last / 10 will give you a point behind the decimal
+  // finally, well return the rounded temp in C
+  return Math.round(((c * 9) / 5 + 32) * 10) / 10;
 };
 
 // Do not edit below this line
